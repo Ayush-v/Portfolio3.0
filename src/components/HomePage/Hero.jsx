@@ -1,16 +1,19 @@
+import { Container } from "components/Container";
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <>
-      <section>
+    <Container>
+      <section className="flex flex-col md:flex-row justify-between items-center py-14 sm:py-24 border-b mb-16 gap-6 md:gap-0">
         <div>
-          <h3 className="uppercase">designer / developer</h3>
-          <h1 className="max-w-4xl text-5xl font-medium text-slate-900 sm:text-7xl mb-6">
+          <h3 className="uppercase text-sm opacity-80">designer / developer</h3>
+          <h1 className="mx-auto max-w-4xl text-5xl font-semibold text-slate-900 sm:text-7xl mb-6">
             Hi, Im{" "}
             <span className="relative whitespace-nowrap">
               <svg
                 aria-hidden="true"
                 viewBox="0 0 279 38"
-                className="absolute top-2/1 left-0 h-[0.58] w-full fill-purple-300"
+                className="absolute top-2/3 left-0 h-[0.58] w-full fill-purple-300/70"
                 preserveAspectRatio="none"
               >
                 <path
@@ -24,13 +27,16 @@ export default function Hero() {
               <span className="relative">Ayush</span>
             </span>
           </h1>
-          <p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700/70">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
             libero delectus doloremque blanditiis rerum consequuntur reiciendis,
             eum praesentium laudantium consequatur.
           </p>
         </div>
+        <div className="rounded-2xl overflow-hidden">
+          <Image src="/HeroImage.png" alt="" width={478} height={635} />
+        </div>
       </section>
-    </>
+    </Container>
   );
 }
