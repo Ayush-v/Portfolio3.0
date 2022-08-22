@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <Container>
-      <section className="flex flex-col md:flex-row justify-between items-center py-14 sm:py-24 border-b mb-16 gap-6 md:gap-0">
+      <section className="flex flex-col md:flex-row justify-between items-center py-14 sm:py-24 mb-16 gap-6 md:gap-0">
         <div>
           <h3 className="uppercase text-sm opacity-80">designer / developer</h3>
           <h1 className="mx-auto max-w-4xl text-5xl font-semibold text-slate-900 sm:text-7xl mb-6">
@@ -28,8 +28,10 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700/70">
-          I love design systems and I think you should too.
-          <br />As well as coding and designing, you can find me taking photos, making videos and occasionally rambling on Twitter.
+            I love design systems and I think you should too.
+            <br />
+            As well as coding and designing, you can find me taking photos,
+            making videos and occasionally rambling on Twitter.
           </p>
         </div>
         <div className="rounded-2xl overflow-hidden">
