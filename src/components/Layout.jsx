@@ -1,5 +1,6 @@
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import Link from "next/link";
+import { useState, forwardRef } from "react";
 
 export default function Layout({ children }) {
   return (
@@ -16,16 +17,32 @@ function Navbar() {
 
   const navList = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/" },
-    { name: "Project", href: "/" },
-    { name: "Contact", href: "/" },
+    { name: "About", href: "#about" },
+    { name: "Project", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
+
+  // eslint-disable-next-line react/display-name
+  const MyButton = forwardRef(({ onClick, href, title }, ref) => {
+    return (
+      <a
+        href={href}
+        onClick={onClick}
+        ref={ref}
+        className="block w-full py-3 px-4 md:py-0"
+      >
+        {title}
+      </a>
+    );
+  });
 
   return (
     <>
       <header className="relative flex justify-between border-b border-slate-100 md:h-20 h-16 items-center md:px-8 px-2">
         <div>
-          <h1 className="md:text-6xl text-5xl">&lt;A&gt;</h1>
+          <Link href="/">
+            <h1 className="md:text-6xl text-5xl">&lt;A&gt;</h1>
+          </Link>
         </div>
 
         <button
@@ -50,9 +67,11 @@ function Navbar() {
             {navList.map((list, idx) => (
               <li
                 key={idx}
-                className="py-3 px-4 md:py-0 bg-white hover:brightness-105 md:bg-none"
+                className="bg-white hover:brightness-105 md:bg-none"
               >
-                {list.name}
+                <Link href={list.href}>
+                  <MyButton title={list.name} onClick={() => setOpen(false)} />
+                </Link>
               </li>
             ))}
           </ul>

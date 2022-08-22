@@ -10,7 +10,7 @@ import linkedIn from "assets/social/LinkedIn.svg";
 
 export default function About() {
   return (
-    <Container>
+    <Container id="about">
       <section className="flex flex-col-reverse md:flex-row py-14 sm:py-24 gap-5">
         <div className="relative mx-auto md:ml-4 mt-8 md:mt-0">
           <Image src={AboutImage} alt="" layout="fixed" />

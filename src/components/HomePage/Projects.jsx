@@ -10,7 +10,7 @@ import terd from "assets/images/terd.png";
 
 export default function Projects() {
   return (
-    <Container>
+    <Container id="projects">
       <section className="py-14 sm:py-24">
         <div className="relative w-fit">
           <h1 className="text-6xl sm:text-7xl font-semibold">Projects</h1>

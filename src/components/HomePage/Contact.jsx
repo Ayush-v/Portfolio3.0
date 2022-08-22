@@ -6,7 +6,7 @@ import comet from "assets/spaceIllustrations/Comet.png";
 
 export default function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <section className="py-14 sm:py-24">
         <div className="relative w-fit">
           <h1 className="text-5xl sm:text-7xl font-semibold">
@@ -52,7 +52,8 @@ export default function Contact() {
               <input
                 type="text"
                 id="default-input"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                placeholder="enter your email"
+                className="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               />
             </form>
           </div>
