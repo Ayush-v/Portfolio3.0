@@ -11,14 +11,14 @@ import linkedIn from "assets/social/LinkedIn.svg";
 export default function About() {
   return (
     <Container>
-      <section className="flex flex-col-reverse md:flex-row py-14 sm:py-24">
+      <section className="flex flex-col-reverse md:flex-row py-14 sm:py-24 gap-5">
         <div className="relative mx-auto md:ml-4 mt-8 md:mt-0">
           <Image src={AboutImage} alt="" layout="fixed" />
           <div className="absolute -top-8 -right-10 -z-10">
             <Image src={dots} alt="" layout="fixed" />
           </div>
         </div>
-        <div className="max-w-xl ml-auto grow basis-0">
+        <div className="max-w-xl mx-auto grow basis-0">
           <div className="relative w-fit">
             <h1 className="text-6xl sm:text-7xl font-semibold">About</h1>
             <div className="absolute -top-8 -right-20">
@@ -29,7 +29,7 @@ export default function About() {
             <span className="dd text-8xl absolute -top-6 -left-4 text-[#d2d2d2]/60">
               &#8220;
             </span>
-            <p>
+            <p className="text-slate-700/90">
               <span className="pl-6">Self</span> Taught UI/UX Designer and
               specialize in IOS Development and Front-End Web Development
               Currently Im persuing my Bachelors Degree in Computer Application
