@@ -6,7 +6,9 @@ export default function Hero() {
     <Container>
       <section className="flex flex-col md:flex-row justify-between items-center py-14 sm:py-24 mb-16 gap-6 md:gap-0">
         <div>
-          <h3 className="uppercase text-sm opacity-80">designer / developer</h3>
+          <span className="uppercase text-sm opacity-80">
+            designer / developer
+          </span>
           <h1 className="mx-auto max-w-4xl text-5xl font-semibold text-slate-900 sm:text-7xl mb-6">
             Hi, Im{" "}
             <span className="relative whitespace-nowrap">

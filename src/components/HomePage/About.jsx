@@ -40,12 +40,26 @@ export default function About() {
             </p>
             <div>
               <div className="mt-6 flex gap-5 items-center">
-                <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
-                  <Image src={github} alt="github" width={28} height={28} />
-                </div>
-                <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
-                  <Image src={linkedIn} alt="github" width={28} height={28} />
-                </div>
+                <a
+                  href="https://github.com/Ayush-v"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:-translate-y-1 transition duration-200"
+                >
+                  <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
+                    <Image src={github} alt="github" width={28} height={28} />
+                  </div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ayush2711"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:-translate-y-1 transition duration-200"
+                >
+                  <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
+                    <Image src={linkedIn} alt="github" width={28} height={28} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>

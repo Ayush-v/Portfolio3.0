@@ -91,9 +91,36 @@ function Footer() {
           Ayush 🤟🏻
         </h1>
         <ul className="flex gap-3 sm:gap-10 sm:text-xl text-md">
-          <li>Instagram</li>
-          <li>Github</li>
-          <li>LinkedIn</li>
+          <li>
+            <a
+              href=""
+              target="_blank"
+              rel="noreferrer"
+              className="hover:border-b-2 border-dotted border-black transition duration-200"
+            >
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Ayush-v"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:border-b-2 border-dotted border-black transition duration-200"
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ayush2711"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:border-b-2 border-dotted border-black transition duration-200"
+            >
+              LinkedIn
+            </a>
+          </li>
         </ul>
       </div>
       <p className="text-right text-lg sm:text-2xl">©2022 Ayush</p>
