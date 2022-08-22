@@ -29,7 +29,7 @@ function Navbar() {
         href={href}
         onClick={onClick}
         ref={ref}
-        className="block w-full py-3 px-4 md:py-0"
+        className="block w-full py-3 px-4 md:py-0 hover:cursor-default"
       >
         {title}
       </a>
