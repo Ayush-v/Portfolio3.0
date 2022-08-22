@@ -28,9 +28,8 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700/70">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-            libero delectus doloremque blanditiis rerum consequuntur reiciendis,
-            eum praesentium laudantium consequatur.
+          I love design systems and I think you should too.
+          <br />As well as coding and designing, you can find me taking photos, making videos and occasionally rambling on Twitter.
           </p>
         </div>
         <div className="rounded-2xl overflow-hidden">

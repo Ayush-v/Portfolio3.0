@@ -1,5 +1,6 @@
 import About from "components/HomePage/About";
 import Hero from "components/HomePage/Hero";
+import Projects from "components/HomePage/Projects";
 import Head from "next/head";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Projects />
       </main>
     </div>
   );
