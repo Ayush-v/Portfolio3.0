@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <>
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
@@ -64,15 +64,19 @@ function Navbar() {
 
 function Footer() {
   return (
-    <>
-      <footer>
-        <h1>Created and designed By Ayush</h1>
-        <ul>
+    <footer className="px-4 sm:px-12 pb-6">
+      <div className="flex justify-between items-center border-b pb-2">
+        <h1 className="text-lg sm:text-2xl">
+          Designed and Created By <br />
+          Ayush 🤟🏻
+        </h1>
+        <ul className="flex gap-3 sm:gap-10 sm:text-xl text-md">
           <li>Instagram</li>
           <li>Github</li>
           <li>LinkedIn</li>
         </ul>
-      </footer>
-    </>
+      </div>
+      <p className="text-right text-lg sm:text-2xl">©2022 Ayush</p>
+    </footer>
   );
 }

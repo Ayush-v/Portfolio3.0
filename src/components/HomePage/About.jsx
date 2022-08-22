@@ -2,18 +2,18 @@ import { Container } from "components/Container";
 import Image from "next/image";
 
 // Assets
-import rover from "assets/Rover.png";
-import imaee from "assets/aboutImage.png";
+import rover from "assets/spaceIllustrations/Rover.png";
+import AboutImage from "assets/images/aboutImage.png";
 import dots from "assets/dots.svg";
-import github from "assets/Github.svg";
-import linkedIn from "assets/LinkedIn.svg";
+import github from "assets/social/Github.svg";
+import linkedIn from "assets/social/LinkedIn.svg";
 
 export default function About() {
   return (
     <Container>
       <section className="flex flex-col-reverse md:flex-row py-14 sm:py-24">
         <div className="relative mx-auto md:ml-4 mt-8 md:mt-0">
-          <Image src={imaee} alt="" layout="fixed" />
+          <Image src={AboutImage} alt="" layout="fixed" />
           <div className="absolute -top-8 -right-10 -z-10">
             <Image src={dots} alt="" layout="fixed" />
           </div>

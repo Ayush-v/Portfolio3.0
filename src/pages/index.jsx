@@ -1,4 +1,5 @@
 import About from "components/HomePage/About";
+import Contact from "components/HomePage/Contact";
 import Hero from "components/HomePage/Hero";
 import Projects from "components/HomePage/Projects";
 import Head from "next/head";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
