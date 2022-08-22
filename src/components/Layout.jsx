@@ -49,6 +49,7 @@ function Navbar() {
           className="md:hidden absolute top-[4.5] right-6"
           aria-controls="primary-navigation"
           aria-expanded="false"
+          aria-label="menu"
           onClick={() => setOpen(!open)}
         >
           {open ? (
@@ -69,7 +70,7 @@ function Navbar() {
                 key={idx}
                 className="bg-white hover:brightness-105 md:bg-none"
               >
-                <Link href={list.href}>
+                <Link href={list.href} passHref={true}>
                   <MyButton title={list.name} onClick={() => setOpen(false)} />
                 </Link>
               </li>

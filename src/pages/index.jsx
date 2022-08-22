@@ -10,6 +10,7 @@ export default function Home() {
       <Head>
         <title>Ayush | Creative Developer</title>
         <meta name="description" content="Creative Web Developer" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
