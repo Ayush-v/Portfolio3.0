@@ -1,7 +1,6 @@
 import { Container } from "components/Container";
 import Image from "next/image";
 
-// Assets
 import rover from "assets/spaceIllustrations/Rover.png";
 import AboutImage from "assets/images/aboutImage.png";
 import dots from "assets/dots.svg";
@@ -30,13 +29,14 @@ export default function About() {
               &#8220;
             </span>
             <p className="text-slate-700/90">
-              <span className="pl-6">Self</span> Taught UI/UX Designer and
-              specialize in IOS Development and Front-End Web Development
-              Currently Im persuing my Bachelors Degree in Computer Application
-              from Panjab University, Chandigarh Started as a designer
-              desigining websites & mobile apps. started coding for fun but then
-              fell in love with it from then onwards i just love coverting my
-              designs into reality.
+              <span className="pl-6">Self</span> Motivated UI/UX Designer and
+              specialize in Web Development. Bachelors Degree in Computer
+              Application from Panjab University, Chandigarh.
+              <br />
+              <br />
+              Started my journey as a designer desigining websites & mobile
+              apps. started coding for fun but then fell in love with it from
+              then onwards i just love coverting my designs into reality.
             </p>
             <div>
               <div className="mt-6 flex gap-5 items-center">
