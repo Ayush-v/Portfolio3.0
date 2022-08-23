@@ -12,6 +12,8 @@ export default function Home() {
         <meta name="description" content="Creative Web Developer" />
         <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <main>

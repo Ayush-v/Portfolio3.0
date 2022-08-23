@@ -93,7 +93,7 @@ function Footer() {
         <ul className="flex gap-3 sm:gap-10 sm:text-xl text-md">
           <li>
             <a
-              href=""
+              href="https://www.instagram.com/ayush_iosdev/"
               target="_blank"
               rel="noreferrer"
               className="hover:border-b-2 border-dotted border-black transition duration-200"
