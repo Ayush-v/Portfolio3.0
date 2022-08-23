@@ -6,7 +6,7 @@ import star from "assets/spaceIllustrations/Star.png";
 import github from "assets/social/Github.svg";
 import easypaper from "assets/images/projects/Easypaper.png";
 import blockChain from "assets/images/projects/BlockChain.png";
-import dashBoard from "assets/images/projects/DashBoard.png";
+import dashBoard from "assets/images/projects/Dashboard.png";
 
 const projectArray = [
   {
