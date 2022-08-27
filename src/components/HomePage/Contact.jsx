@@ -43,9 +43,14 @@ export default function Contact() {
                     stroke="#8261FF"
                   />
                 </svg>
-                <span className="hover:border-b-2 hover:border-black hover:border-dotted hover:cursor-pointer">
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText("ayushverma1194@gmail.com");
+                  }}
+                  className="hover:border-b-2 hover:border-black hover:border-dotted hover:cursor-pointer hover:my-[-1px] transition duration-200"
+                >
                   ayushverma1194@gmail.com
-                </span>
+                </button>
               </div>
 
               <form>
