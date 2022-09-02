@@ -26,9 +26,9 @@ export default function Contact() {
           <div className="bg-white shadow-md p-6 rounded-2xl md:mt-24 mt-10 border w-fit mx-auto">
             <div className="flex flex-col gap-6 max-w-md h-fit">
               <p className="text-slate-700/70">
-                Im also interested in freelance opportunities-especially
+                I&#39;m also interested in freelance opportunities-especially
                 ambitious on large projects. However, if you have other request
-                or question, dont hesitate to use the form
+                or question, dont hesitate.
               </p>
               <div className="flex items-center gap-3">
                 <svg

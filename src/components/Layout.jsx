@@ -1,6 +1,7 @@
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useState, forwardRef } from "react";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   return (
@@ -14,6 +15,7 @@ export default function Layout({ children }) {
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const { asPath } = useRouter();
 
   const navList = [
     { name: "Home", href: "/" },
@@ -29,7 +31,9 @@ function Navbar() {
         href={href}
         onClick={onClick}
         ref={ref}
-        className="block w-full py-3 px-4 md:py-0"
+        className={`${
+          asPath === `${href}` ? "" : ""
+        } block w-full py-3 px-4 md:py-0 `}
       >
         {title}
       </a>
