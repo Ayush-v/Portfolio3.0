@@ -1,10 +1,34 @@
 import { Container } from "components/Container";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 import comet from "assets/spaceIllustrations/Comet.png";
 import arrow from "assets/arrow.svg";
+import { useRef } from "react";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_APP_SERVICE_ID,
+        process.env.NEXT_PUBLIC_APP_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <Container id="contact">
       <section className="py-14 sm:py-24">
@@ -53,13 +77,23 @@ export default function Contact() {
                 </button>
               </div>
 
-              <form>
-                <input
-                  type="text"
-                  id="default-input"
-                  placeholder="enter your email"
-                  className="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                />
+              <form ref={form} onSubmit={sendEmail} autoComplete="off">
+                <div className="flex gap-4">
+                  <input
+                    type="text"
+                    id="default-input"
+                    placeholder="enter your email"
+                    name="email"
+                    className="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="border-2 bg-black border-white text-white px-3.5 py-2 rounded-md"
+                  >
+                    send
+                  </button>
+                </div>
               </form>
             </div>
           </div>
