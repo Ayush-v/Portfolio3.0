@@ -7,6 +7,7 @@ import github from "assets/social/Github.svg";
 import easypaper from "assets/images/projects/Easypaper.png";
 import blockChain from "assets/images/projects/BlockChain.png";
 import dashBoard from "assets/images/projects/Dashboard.png";
+import vishrut from "assets/images/projects/vishrut.png";
 
 const projectArray = [
   {
@@ -30,6 +31,13 @@ const projectArray = [
     description: "Want to know about BlockChain Hop on coz u gonna love it.",
     previewLink: "https://blockchain-dun.vercel.app/",
     githubLink: "https://github.com/Ayush-v/Blockchain-Webapp.git",
+  },
+  {
+    image: vishrut,
+    title: "culinary management student",
+    description: "Dear Friend of mine. A Chef in The Heart of Canada",
+    previewLink: "https://vishrut-portfolio.vercel.app/",
+    githubLink: "https://github.com/Ayush-v/Vishrut-Portfolio",
   },
 ];
 
@@ -56,7 +64,9 @@ export default function Projects() {
                 </div>
               </div>
               <div className="pt-4 mt-24 sm:pt-0 sm:mt-28 md:mt-32 flex flex-col gap-4">
-                <h1 className="text-3xl sm:text-4xl">{project.title}</h1>
+                <h1 className="text-3xl sm:text-4xl capitalize">
+                  {project.title}
+                </h1>
                 <p className="text-slate-700/70">{project.description}</p>
                 <div className="flex gap-3 items-center">
                   {project.githubLink && (
