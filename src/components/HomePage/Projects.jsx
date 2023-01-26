@@ -43,7 +43,7 @@ const projectArray = [
   },
 ];
 
-function Tilt(props) {
+export function Tilt(props) {
   const { options, ...rest } = props;
   const tilt = useRef(null);
 

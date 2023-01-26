@@ -1,6 +1,7 @@
 import { Container } from "components/Container";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Tilt } from "./Projects";
 
 export default function Hero() {
   const pathVariants = {
@@ -12,6 +13,14 @@ export default function Hero() {
       pathLength: 1,
       fill: "rgba(130, 97, 255, 1)",
     },
+  };
+
+  const options = {
+    scale: 1.05,
+    speed: 1000,
+    max: 8,
+    glare: true,
+    "max-glare": 0.4,
   };
 
   return (
@@ -52,9 +61,11 @@ export default function Hero() {
             give your designs life.
           </p>
         </div>
-        <div className="rounded-2xl overflow-hidden">
-          <Image src="/HeroImage.png" alt="" width={478} height={635} />
-        </div>
+        <Tilt options={options}>
+          <div className="rounded-2xl overflow-hidden">
+            <Image src="/HeroImage.png" alt="" width={478} height={635} />
+          </div>
+        </Tilt>
       </section>
     </Container>
   );
