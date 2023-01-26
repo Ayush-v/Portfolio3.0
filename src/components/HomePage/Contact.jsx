@@ -4,13 +4,17 @@ import emailjs from "@emailjs/browser";
 
 import comet from "assets/spaceIllustrations/Comet.png";
 import arrow from "assets/arrow.svg";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Contact() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -23,9 +27,19 @@ export default function Contact() {
         (result) => {
           console.log(result.text);
           form.current.reset();
+          setLoading(false);
+          setSuccess(true);
+          setTimeout(() => {
+            setSuccess(false);
+          }, 1500);
         },
         (error) => {
           console.log(error.text);
+          setLoading(false);
+          setFailed(true);
+          setTimeout(() => {
+            setFailed(false);
+          }, 1500);
         }
       );
   };
@@ -88,12 +102,37 @@ export default function Contact() {
                     className="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     required
                   />
-                  <button
-                    type="submit"
-                    className="border-2 bg-black border-white text-white px-3.5 py-2 rounded-md"
-                  >
-                    send
-                  </button>
+                  <div>
+                    <button
+                      type="submit"
+                      className={
+                        success
+                          ? "inline-flex h-10 w-32 items-center justify-center rounded-md border border-transparent bg-green-500 px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-bg-green-500 focus:ring-offset-2 disabled:opacity-75"
+                          : failed
+                          ? "inline-flex h-10 w-32 items-center justify-center rounded-md border border-transparent bg-red-500 px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-bg-red-500 focus:ring-offset-2 disabled:opacity-75"
+                          : `inline-flex h-10 w-32 items-center justify-center rounded-md border border-transparent bg-black px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-75`
+                      }
+                      disabled={loading}
+                    >
+                      {loading ? (
+                        <span className="inline-flex items-center gap-px">
+                          <span className="animate-blink mx-px h-1.5 w-1.5 rounded-full bg-white"></span>
+                          <span className="animate-blink animation-delay-150 mx-px h-1.5 w-1.5 rounded-full bg-white"></span>
+                          <span className="animate-blink animation-delay-300 mx-px h-1.5 w-1.5 rounded-full bg-white"></span>
+                        </span>
+                      ) : success ? (
+                        <span className="inline-flex items-center gap-px">
+                          success!
+                        </span>
+                      ) : failed ? (
+                        <span className="inline-flex items-center gap-px">
+                          Failed!
+                        </span>
+                      ) : (
+                        <span>send</span>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

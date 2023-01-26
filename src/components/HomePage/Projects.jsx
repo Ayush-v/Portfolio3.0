@@ -1,6 +1,7 @@
 import { Container } from "components/Container";
 import Image from "next/image";
 import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
+import VanillaTilt from "vanilla-tilt";
 
 import star from "assets/spaceIllustrations/Star.png";
 import github from "assets/social/Github.svg";
@@ -8,12 +9,13 @@ import easypaper from "assets/images/projects/Easypaper.png";
 import blockChain from "assets/images/projects/BlockChain.png";
 import dashBoard from "assets/images/projects/Dashboard.png";
 import vishrut from "assets/images/projects/vishrut.png";
+import { useEffect, useRef } from "react";
 
 const projectArray = [
   {
     image: easypaper,
     title: "EasyPaper",
-    description: "One Stop education platform built for simplicity",
+    description: "One Stop education platform built for simplicity.",
     previewLink: "https://easypaper-ashy.vercel.app",
     githubLink: "",
   },
@@ -41,7 +43,24 @@ const projectArray = [
   },
 ];
 
+function Tilt(props) {
+  const { options, ...rest } = props;
+  const tilt = useRef(null);
+
+  useEffect(() => {
+    VanillaTilt.init(tilt.current, options);
+  }, [options]);
+
+  return <div ref={tilt} {...rest} />;
+}
+
 export default function Projects() {
+  const options = {
+    scale: 1.05,
+    speed: 1000,
+    max: 8,
+  };
+
   return (
     <Container id="projects">
       <section className="py-14 sm:py-24">
@@ -52,45 +71,51 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="mt-36 sm:mt-40 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-36 place-items-center">
+        <div className="mt-36 sm:mt-40 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-36 place-items-center md:place-items-stretch items-stretch">
           {projectArray.map((project, id) => (
-            <div
-              key={id}
-              className="bg-white shadow-md border p-10 rounded-3xl flex flex-col gap-4 relative max-w-[550px] w-full h-auto"
-            >
-              <div className="block w-auto h-full absolute -top-28 sm:left-8 sm:right-8 left-4 right-4">
-                <div className="relative rounded-2xl overflow-hidden max-h-64 object-cover after:content-[''] after:w-full after:h-full after:absolute after:bg-inherit after:bg-[center center] after:-z-[1] after:drop-shadow-2xl after:blur-lg">
-                  <Image src={project.image} alt="" layout="responsive" />
+            <Tilt key={id} options={options}>
+              <div className="bg-white shadow-md border p-10 rounded-3xl flex flex-col gap-4 relative max-w-[550px] w-full h-full">
+                <div className="block w-auto h-full absolute -top-20 sm:left-8 sm:right-8 left-4 right-4">
+                  <div className="relative rounded-2xl overflow-hidden max-h-64 object-cover after:content-[''] after:w-full after:h-full after:absolute after:bg-inherit after:bg-[center center] after:-z-[1] after:drop-shadow-2xl after:blur-lg">
+                    <Image src={project.image} alt="" layout="responsive" />
+                  </div>
                 </div>
-              </div>
-              <div className="pt-4 mt-24 sm:pt-0 sm:mt-28 md:mt-32 flex flex-col gap-4">
-                <h1 className="text-3xl sm:text-4xl capitalize">
-                  {project.title}
-                </h1>
-                <p className="text-slate-700/70">{project.description}</p>
-                <div className="flex gap-3 items-center">
-                  {project.githubLink && (
+                <div className="pt-4 mt-32 sm:pt-0 sm:mt-36 md:mt-44 flex flex-col gap-4">
+                  <h1 className="text-3xl sm:text-4xl capitalize trans">
+                    {project.title}
+                  </h1>
+                  <p className="text-slate-700/70 line-clamp-2">
+                    {project.description}
+                  </p>
+                  <div className="flex gap-3 items-center">
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:-translate-y-2 transition duration-200"
+                      >
+                        <Image
+                          src={github}
+                          alt="github"
+                          width={28}
+                          height={28}
+                        />
+                      </a>
+                    )}
                     <a
-                      href={project.githubLink}
+                      href={project.previewLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:-translate-y-2 transition duration-200"
+                      className="border rounded-full px-4 py-1 flex items-center gap-2 hover:bottom-1 hover:border-black group transition-all duration-200"
                     >
-                      <Image src={github} alt="github" width={28} height={28} />
+                      <span>Live preview</span>
+                      <ArrowNarrowRightIcon className="w-5 h-5 group-hover:w-6 group-hover:h-6 group-hover:translate-x-2" />
                     </a>
-                  )}
-                  <a
-                    href={project.previewLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="border rounded-full px-4 py-1 flex items-center gap-2 hover:bottom-1 hover:border-black group transition-all duration-200"
-                  >
-                    <span>Live preview</span>
-                    <ArrowNarrowRightIcon className="w-5 h-5 group-hover:w-6 group-hover:h-6 group-hover:translate-x-2" />
-                  </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Tilt>
           ))}
         </div>
       </section>
