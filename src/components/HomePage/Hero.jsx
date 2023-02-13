@@ -38,7 +38,7 @@ export default function Hero() {
                 viewBox="0 0 280 39"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-2/3 left-0 h-[0.58] w-full stroke-[#8261FF]"
+                className="absolute top-[75%] left-0 h-[0.58] w-full stroke-[#8261FF] rotate-3"
                 preserveAspectRatio="none"
               >
                 <motion.path
