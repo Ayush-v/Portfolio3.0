@@ -8,7 +8,7 @@ function TextReveal({ text }) {
   }, []);
 
   if (!hydrated) {
-    return null;
+    return <>{text}</>;
   }
 
   return (
