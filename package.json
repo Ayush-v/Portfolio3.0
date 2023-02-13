@@ -16,6 +16,7 @@
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-random-reveal": "^2.0.0",
     "react-vanilla-tilt": "^1.0.0",
     "vanilla-tilt": "^1.8.0"
   },
