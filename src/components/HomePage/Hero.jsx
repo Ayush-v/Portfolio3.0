@@ -70,7 +70,13 @@ export default function Hero() {
         </div>
         <Tilt options={options}>
           <div className="rounded-2xl overflow-hidden">
-            <Image src="/HeroImage.png" alt="" width={478} height={635} />
+            <Image
+              priority
+              src="/HeroImage.png"
+              alt=""
+              width={478}
+              height={635}
+            />
           </div>
         </Tilt>
       </section>
