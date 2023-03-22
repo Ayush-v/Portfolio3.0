@@ -71,7 +71,6 @@ export default function Hero() {
         <Tilt options={options}>
           <div className="rounded-2xl overflow-hidden">
             <Image
-              priority
               src="/images/heroImage.png"
               alt=""
               width={478}

@@ -78,7 +78,7 @@ export default function Projects() {
               className="bg-white shadow-md border p-10 rounded-3xl flex flex-col gap-4 relative max-w-[550px] w-full h-full"
             >
               <div className="block w-auto h-full absolute -top-20 sm:left-8 sm:right-8 left-4 right-4">
-                <div className="relative rounded-2xl overflow-hidden h-72 w-auto object-contain after:content-[''] after:w-full after:h-full after:absolute after:bg-inherit after:bg-[center center] after:-z-[1] after:drop-shadow-2xl after:blur-lg -mt-8 md:-mt-5">
+                <div className="relative rounded-2xl overflow-hidden h-56 md:h-72 w-auto object-contain after:content-[''] after:w-full after:h-full after:absolute after:bg-inherit after:bg-[center center] after:-z-[1] after:drop-shadow-2xl after:blur-lg -mt-8 md:-mt-5">
                   <Image src={project.image} alt="" layout="fill" />
                 </div>
               </div>
@@ -97,12 +97,6 @@ export default function Projects() {
                       rel="noreferrer"
                       className="hover:-translate-y-2 transition duration-200"
                     >
-                      {/* <Image
-                          src={github}
-                          alt="github"
-                          width={28}
-                          height={28}
-                        /> */}
                       <Icons.GithubIcon className="w-7 h-7" />
                     </a>
                   )}

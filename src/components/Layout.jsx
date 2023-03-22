@@ -43,11 +43,9 @@ function Navbar() {
   return (
     <>
       <header className="relative flex justify-between border-b border-slate-100 md:h-20 h-16 items-center md:px-8 px-2">
-        <div>
-          <Link href="/">
-            <h1 className="md:text-6xl text-5xl">&lt;A&gt;</h1>
-          </Link>
-        </div>
+        <Link href="/">
+          <h1 className="md:text-6xl text-5xl cursor-pointer">&lt;A&gt;</h1>
+        </Link>
 
         <button
           className="md:hidden absolute top-[4.5] right-6"
