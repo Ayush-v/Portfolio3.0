@@ -1,10 +1,8 @@
 import { Container } from "components/Container";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
-
-import comet from "assets/spaceIllustrations/Comet.png";
-import arrow from "assets/arrow.svg";
 import { useRef, useState } from "react";
+import Icons from "components/Icons";
 
 export default function Contact() {
   const form = useRef();
@@ -52,7 +50,11 @@ export default function Contact() {
             Dont forget to hit me up
             <div className="inline-block translate-y-2">
               <span className="block w-12 h-12 sm:w-20 sm:h-20 rotate-45">
-                <Image src={comet} alt="" layout="responsive" />
+                <Image
+                  src="/images/spaceIcons/comet.png"
+                  alt=""
+                  layout="fill"
+                />
               </span>
             </div>
           </h1>
@@ -60,7 +62,7 @@ export default function Contact() {
 
         <div className="flex">
           <span className="hidden lg:block">
-            <Image src={arrow} alt="" layout="fixed" />
+            <Icons.Arrow className="w-full h-auto" />
           </span>
           <div className="bg-white shadow-md p-6 rounded-2xl md:mt-24 mt-10 border w-fit mx-auto">
             <div className="flex flex-col gap-6 max-w-md h-fit">

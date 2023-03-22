@@ -1,27 +1,27 @@
 import { Container } from "components/Container";
 import Image from "next/image";
-
-import rover from "assets/spaceIllustrations/Rover.png";
-import AboutImage from "assets/images/aboutImage.png";
-import dots from "assets/dots.svg";
-import github from "assets/social/Github.svg";
-import linkedIn from "assets/social/LinkedIn.svg";
+import Icons from "components/Icons";
 
 export default function About() {
   return (
     <Container id="about">
       <section className="flex flex-col-reverse md:flex-row py-14 sm:py-24 gap-5">
-        <div className="relative mx-auto md:ml-4 mt-8 md:mt-0">
-          <Image src={AboutImage} alt="" layout="fixed" />
+        <div className="relative mx-auto md:ml-4 mt-8 md:mt-0 w-full max-w-[280px] h-auto">
+          <Image src="/images/aboutImage.png" alt="" layout="fill" />
           <div className="absolute -top-8 -right-10 -z-10">
-            <Image src={dots} alt="" layout="fixed" />
+            <Icons.Dots />
           </div>
         </div>
         <div className="max-w-xl mx-auto grow basis-0">
           <div className="relative w-fit">
             <h1 className="text-6xl sm:text-7xl font-semibold">About</h1>
             <div className="absolute -top-8 -right-20">
-              <Image src={rover} alt="" layout="fixed" />
+              <Image
+                src="/images/spaceIcons/rover.png"
+                alt=""
+                width={75}
+                height={75}
+              />
             </div>
           </div>
           <div className="relative mt-10">
@@ -47,7 +47,7 @@ export default function About() {
                   className="hover:-translate-y-1 transition duration-200"
                 >
                   <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
-                    <Image src={github} alt="github" width={28} height={28} />
+                    <Icons.GithubIcon className="w-7 h-7" />
                   </div>
                 </a>
                 <a
@@ -57,7 +57,7 @@ export default function About() {
                   className="hover:-translate-y-1 transition duration-200"
                 >
                   <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
-                    <Image src={linkedIn} alt="github" width={28} height={28} />
+                    <Icons.LinkedIn className="w-7 h-7" />
                   </div>
                 </a>
               </div>

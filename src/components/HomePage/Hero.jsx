@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="rounded-2xl overflow-hidden">
             <Image
               priority
-              src="/HeroImage.png"
+              src="/images/heroImage.png"
               alt=""
               width={478}
               height={635}
