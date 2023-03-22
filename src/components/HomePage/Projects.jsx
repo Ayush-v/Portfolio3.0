@@ -93,6 +93,7 @@ export default function Projects() {
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
+                      aria-label="github"
                       target="_blank"
                       rel="noreferrer"
                       className="hover:-translate-y-2 transition duration-200"
@@ -104,6 +105,7 @@ export default function Projects() {
                     href={project.previewLink}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="linkedIn"
                     className="border rounded-full px-4 py-1 flex items-center gap-2 hover:bottom-1 hover:border-black group transition-all duration-200"
                   >
                     <span>Live preview</span>

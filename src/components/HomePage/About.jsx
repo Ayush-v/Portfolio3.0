@@ -44,6 +44,7 @@ export default function About() {
                   href="https://github.com/Ayush-v"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="github"
                   className="hover:-translate-y-1 transition duration-200"
                 >
                   <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
@@ -54,6 +55,7 @@ export default function About() {
                   href="https://www.linkedin.com/in/ayush2711"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="linkedIn"
                   className="hover:-translate-y-1 transition duration-200"
                 >
                   <div className="w-12 h-12 bg-white border shadow-sm flex justify-center items-center rounded-xl">
