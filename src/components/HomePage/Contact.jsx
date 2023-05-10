@@ -67,9 +67,9 @@ export default function Contact() {
           <div className="bg-white shadow-md p-6 rounded-2xl md:mt-24 mt-10 border w-fit mx-auto">
             <div className="flex flex-col gap-6 max-w-md h-fit">
               <p className="text-slate-700/70">
-                I&#39;m also interested in freelance opportunities-especially
-                ambitious on large projects. However, if you have other request
-                or question, dont hesitate.
+                I am also interested in freelance opportunities, especially
+                ambitious projects. However, if you have any other requests or
+                questions, please don&#39;t hesitate to contact me.
               </p>
               <div className="flex items-center gap-3">
                 <svg

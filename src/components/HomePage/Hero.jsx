@@ -63,9 +63,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mx-auto mt-6 pr-4 max-w-2xl text-lg tracking-tight text-slate-700/70">
-            I love making world a better place with my designs and coding
-            skills. <br /> you&#39;r at the right place if you want to see how i
-            give your designs life.
+            I love making the world a better place with my design and coding
+            skills. You&#39;re at the right place if you want to see how I can
+            bring your designs to life.
           </p>
         </div>
         <Tilt options={options}>

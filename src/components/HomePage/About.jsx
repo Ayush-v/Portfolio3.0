@@ -29,14 +29,13 @@ export default function About() {
               &#8220;
             </span>
             <p className="text-slate-700/90">
-              <span className="pl-6">Self</span> Motivated UI/UX Designer and
-              specialize in Web Development. Bachelor&#39;s Degree in Computer
-              Applications from Panjab University, Chandigarh.
+              <span className="pl-6">I</span> am a self-motivated UI/UX Designer
+              who specializes in Web Development. I hold a Bachelor&#39;s Degree
+              in Computer Applications from Panjab University, Chandigarh.
               <br />
-              <br />
-              Started my journey as a designer desigining websites & mobile
-              apps. Started coding for fun but then fell in love with it from
-              then onwards i just love coverting my designs into reality.
+              <br />I started my journey as a designer by designing websites and
+              mobile apps. I began coding for fun, but soon fell in love with
+              it. Since then, I have enjoyed converting my designs into reality.
             </p>
             <div>
               <div className="mt-6 flex gap-5 items-center">
