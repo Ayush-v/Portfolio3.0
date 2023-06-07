@@ -130,9 +130,7 @@ function Footer() {
         </ul>
       </div>
       <p className="text-right text-lg sm:text-2xl">
-        ©{new Date().getFullYear() === 2023 && 2023}
-        {new Date().getFullYear() === 2024 && 2024}
-        {new Date().getFullYear() === 2024 && 2024} Ayush
+        ©{new Date().getFullYear()} Ayush
       </p>
     </footer>
   );

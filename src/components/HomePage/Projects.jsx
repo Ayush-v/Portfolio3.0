@@ -4,6 +4,7 @@ import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
 import VanillaTilt from "vanilla-tilt";
 import { useEffect, useRef } from "react";
 import Icons from "components/Icons";
+import ProjectBox from "components/ProjectBox";
 
 const projectArray = [
   {
@@ -57,7 +58,7 @@ export default function Projects() {
 
   return (
     <Container id="projects">
-      <section className="py-14 sm:py-24">
+      <section className="py-14 sm:py-24 w-full">
         <div className="relative w-fit">
           <h1 className="text-6xl sm:text-7xl font-semibold">Projects</h1>
           <div className="absolute -top-14 -right-20 object-cover">
@@ -117,6 +118,18 @@ export default function Projects() {
             // </Tilt>
           ))}
         </div>
+        {/* <div className="mt-36 sm:mt-40 grid grid-cols-1 md:grid-cols-2 place-items-center gap-8">
+          {projectArray.map((project, id) => (
+            <ProjectBox
+              key={id}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              previewLink={project.previewLink}
+              githubLink={project.githubLink}
+            />
+          ))}
+        </div> */}
       </section>
     </Container>
   );
