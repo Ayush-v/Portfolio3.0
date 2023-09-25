@@ -4,7 +4,6 @@ import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
 import VanillaTilt from "vanilla-tilt";
 import { useEffect, useRef } from "react";
 import Icons from "components/Icons";
-import ProjectBox from "components/ProjectBox";
 
 const projectArray = [
   {
@@ -12,6 +11,14 @@ const projectArray = [
     title: "EasyPaper",
     description: "One Stop education platform built for simplicity.",
     previewLink: "https://easypaper-ashy.vercel.app",
+    githubLink: "",
+  },
+  {
+    image: "/images/projects/easypaper2.png",
+    title: "EasyPaper 2.0",
+    description:
+      "Turning Exam Stress into Success Download EasyPaper App - Your Ultimate Prep Companion!",
+    previewLink: "https://easypaper.in",
     githubLink: "",
   },
   {
@@ -35,6 +42,14 @@ const projectArray = [
     description: "Dear Friend of mine. A Chef in The Heart of Canada",
     previewLink: "https://vishrut-portfolio.vercel.app/",
     githubLink: "https://github.com/Ayush-v/Vishrut-Portfolio",
+  },
+  {
+    image: "/images/projects/ayushNew.png",
+    title: "Porfolio (Coming Soon)",
+    description: "",
+    previewLink:
+      "https://ayush-linktree-git-portfolio-refactor-ayush-v.vercel.app",
+    githubLink: "",
   },
 ];
 
@@ -80,7 +95,12 @@ export default function Projects() {
             >
               <div className="block w-auto h-full absolute -top-20 sm:left-8 sm:right-8 left-4 right-4">
                 <div className="relative rounded-2xl overflow-hidden h-56 md:h-72 w-auto object-contain after:content-[''] after:w-full after:h-full after:absolute after:bg-inherit after:bg-[center center] after:-z-[1] after:drop-shadow-2xl after:blur-lg -mt-8 md:-mt-5">
-                  <Image src={project.image} alt="" layout="fill" />
+                  <Image
+                    src={project.image}
+                    alt=""
+                    layout="fill"
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div className="pt-4 mt-32 sm:pt-0 sm:mt-36 md:mt-44 flex flex-col gap-4">
